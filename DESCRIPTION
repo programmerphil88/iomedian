@@ -1,0 +1,5 @@
+Package: iom
+Type: Package
+Title: Inferential Ordinal Median Calculator
+Version: 0.0.1.0
+RoxygenNote: 7.2.3

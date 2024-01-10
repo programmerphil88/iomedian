@@ -30,7 +30,7 @@ iom <- function(input,conflvl){
 #
     for (i in min(input):max(input)) {
 #    print(i);
-    pval <- wilcox.test(input,mu=i,alternative="greater")$p.value;
+    pval <- wilcox.test(input,mu=i,alternative="greater",exact=FALSE)$p.value;
 #    print(pval);
 #    print(1-conflvl);
     if (pval >= 1-conflvl) {return(i)}

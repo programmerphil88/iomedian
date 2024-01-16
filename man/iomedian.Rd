@@ -2,22 +2,22 @@
 % Please edit documentation in R/iomedian.R
 \name{iomedian}
 \alias{iomedian}
-\title{Inferential Median Calculator for Ordinal Data}
+\title{Inferential Median Function for Ordinal Data}
 \usage{
 iomedian(input, conflvl)
 }
 \arguments{
-\item{input}{A vector of ordinal data. Type: integer.}
+\item{input}{An array of ordinal data. Type: array of integers.}
 
-\item{conflvl}{(optional) The desired confidence level. Default is 0.95. Type: non-negative real.}
+\item{conflvl}{(optional) The desired confidence level. Default is 0.95. Type: positive real.}
 }
 \value{
 The inferential median. Type: integer.
 }
 \description{
-Inferentially determines the median of ordinal (e.g. Likert) data. The input data is outrightly assumed to be ordinal in nature and not normally distributed. Performs a series of one-sample Wilcoxon Rank tests to inferentially ascertain where the ordinal data tends to gravitate. iomedian stands for "inferential ordinal median".
+Inferentially determines the median of ordinal (e.g. Likert) data. The input data is outrightly assumed to be ordinal in nature and not normally distributed. Performs a series of one-sample Wilcoxon Rank tests to inferentially ascertain where the ordinal data tends to gravitate at a chosen confidence level (default is 0.95). iomedian stands for "inferential ordinal median".
 }
 \examples{
-iomedian(c(2,4,5,4,2,5,1,4,5,5,4,5,2,3,4,3,5,5,3,2,5,2,3,4,5,4,5,4,5,2),0.99)
-iomedian(c(2,4,5,4,2,5,1,4,5,5,4,5,2,3,4,3,5,5,3,2,5,2,3,4,5,4,5,4,5,2))
+iomedian(c(2,5,1,3,5,5,3,2,5,1,1),0.99)
+iomedian(c(2,5,1,3,5,5,3,2,5,1,1))
 }
